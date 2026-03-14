@@ -36,7 +36,7 @@ Abra o arquivo index.html diretamente no navegador
 
 Não há necessidade de servidor, build ou instalação de dependências.
 Online (GitHub Pages)
-Acesse em: https://seu-usuario.github.io/loja-perfumes
+Acesse em: https://GabrielStmm.github.io/loja-perfumes
 
 🛠️ Tecnologias
 TecnologiaUsoHTML5Estrutura e semânticaCSS3Estilização, animações e responsividadeJavaScript (ES6+)Interatividade e lógica do carrinhoGoogle FontsTipografia (Cormorant Garamond + Jost)SVGIlustrações dos frascos de perfume
