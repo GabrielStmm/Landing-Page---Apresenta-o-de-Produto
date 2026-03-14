@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SILLAGE — Maison de Parfums</title>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-logo">SILLAGE</div>
+  <div class="loader-line"></div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">SILLAGE</a>
+  <ul class="nav-links">
+    <li><a href="#colecoes">Coleções</a></li>
+    <li><a href="#categorias">Categorias</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <div class="nav-icons">
+    <button title="Buscar">⌕</button>
+    <button title="Wishlist">♡</button>
+    <button id="cartBtn" title="Carrinho" style="position:relative;">
+      ⊕
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-tag">Nova Coleção — Outono 2025</span>
+    <h1 class="hero-title">A arte do<br><em>invisível</em><br>que permanece</h1>
+    <p class="hero-desc">Cada fragrância é uma assinatura olfativa única, criada por mestres perfumistas com ingredientes raros de todo o mundo.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="document.getElementById('colecoes').scrollIntoView({behavior:'smooth'})"><span>Explorar Coleção</span></button>
+      <a href="#sobre" class="btn-secondary">Nossa história</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-image-wrap">
+      <div class="hero-bottle">
+        <svg class="bottle-svg" viewBox="0 0 200 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Bottle stopper -->
+          <rect x="85" y="10" width="30" height="8" rx="2" fill="#C9A96E" opacity="0.9"/>
+          <!-- Bottle neck -->
+          <rect x="88" y="18" width="24" height="30" rx="2" fill="#E8D5B0" opacity="0.7"/>
+          <rect x="91" y="20" width="18" height="26" fill="rgba(255,255,255,0.1)"/>
+          <!-- Bottle shoulder -->
+          <path d="M78 48 Q78 68 60 80 L60 280 Q60 295 100 295 Q140 295 140 280 L140 80 Q122 68 122 48 Z" fill="rgba(201,169,110,0.15)" stroke="#C9A96E" stroke-width="1.5"/>
+          <!-- Bottle body inner glow -->
+          <path d="M85 80 Q85 85 72 90 L72 275 Q72 285 100 285 Q128 285 128 275 L128 90 Q115 85 115 80 Z" fill="rgba(255,255,255,0.05)"/>
+          <!-- Label background -->
+          <rect x="68" y="130" width="64" height="90" rx="1" fill="rgba(245,240,232,0.12)" stroke="rgba(201,169,110,0.4)" stroke-width="0.5"/>
+          <!-- Label text lines (decorative) -->
+          <rect x="76" y="145" width="48" height="1" fill="rgba(201,169,110,0.5)"/>
+          <text x="100" y="168" text-anchor="middle" font-family="serif" font-size="11" fill="rgba(245,240,232,0.8)" letter-spacing="3">SILLAGE</text>
+          <rect x="82" y="178" width="36" height="0.5" fill="rgba(201,169,110,0.4)"/>
+          <text x="100" y="195" text-anchor="middle" font-family="sans-serif" font-size="6" fill="rgba(245,240,232,0.4)" letter-spacing="2">EAU DE PARFUM</text>
+          <rect x="76" y="206" width="48" height="1" fill="rgba(201,169,110,0.5)"/>
+          <!-- Shine highlight -->
+          <path d="M75 80 Q75 85 70 90 L70 240 Q74 248 76 240 L76 92 Q80 88 80 80 Z" fill="rgba(255,255,255,0.08)"/>
+          <!-- Bottom -->
+          <ellipse cx="100" cy="286" rx="40" ry="8" fill="rgba(201,169,110,0.1)" stroke="rgba(201,169,110,0.3)" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="hero-number">01</div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Role para descobrir
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item"><span>✦</span> Frete Grátis acima de R$450</span>
+    <span class="marquee-item"><span>✦</span> Amostras Grátis em todo pedido</span>
+    <span class="marquee-item"><span>✦</span> Embalagem Premium para Presente</span>
+    <span class="marquee-item"><span>✦</span> Devolução em 30 dias</span>
+    <span class="marquee-item"><span>✦</span> Ingredientes de origem sustentável</span>
+    <span class="marquee-item"><span>✦</span> Frete Grátis acima de R$450</span>
+    <span class="marquee-item"><span>✦</span> Amostras Grátis em todo pedido</span>
+    <span class="marquee-item"><span>✦</span> Embalagem Premium para Presente</span>
+    <span class="marquee-item"><span>✦</span> Devolução em 30 dias</span>
+    <span class="marquee-item"><span>✦</span> Ingredientes de origem sustentável</span>
+  </div>
+</div>
+
+<!-- FEATURED PRODUCTS -->
+<section class="section" id="colecoes">
+  <div class="section-header reveal">
+    <div>
+      <span class="section-label">Destaque da Temporada</span>
+      <h2 class="section-title">Fragrâncias <em>Icônicas</em></h2>
+    </div>
+    <a href="#" class="view-all">Ver todos</a>
+  </div>
+  <div class="products-grid">
+    <!-- Product 1 -->
+    <div class="product-card reveal">
+      <div class="product-img">
+        <div class="product-bg" style="background: linear-gradient(135deg, #1a0a0a 0%, #4a1515 50%, #2a0808 100%);">
+          <svg width="100" height="150" viewBox="0 0 100 150" fill="none">
+            <rect x="42" y="5" width="16" height="6" rx="1" fill="#C9A96E"/>
+            <rect x="44" y="11" width="12" height="18" fill="#E8D5B0" opacity="0.7"/>
+            <path d="M36 29 Q36 40 28 46 L28 122 Q28 130 50 130 Q72 130 72 122 L72 46 Q64 40 64 29 Z" fill="rgba(201,169,110,0.15)" stroke="#C9A96E" stroke-width="1"/>
+            <rect x="33" y="65" width="34" height="42" rx="1" fill="rgba(245,240,232,0.08)" stroke="rgba(201,169,110,0.3)" stroke-width="0.5"/>
+            <text x="50" y="84" text-anchor="middle" font-family="serif" font-size="5.5" fill="rgba(245,240,232,0.8)" letter-spacing="2">SILLAGE</text>
+            <text x="50" y="96" text-anchor="middle" font-family="serif" font-size="4" fill="rgba(201,169,110,0.7)" letter-spacing="1">ROUGE</text>
+          </svg>
+        </div>
+        <div class="product-overlay"></div>
+        <button class="product-quick-add" onclick="addToCart('Sillage Rouge', 'R$ 890', this)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-info">
+        <div class="product-family">Floral Oriental</div>
+        <div class="product-name">Sillage Rouge</div>
+        <div class="product-notes">Rosa de Damasco · Oud · Âmbar · Baunilha</div>
+        <div class="product-footer">
+          <span class="product-price">R$ 890</span>
+          <div class="product-sizes">
+            <button class="size-btn active" onclick="selectSize(this)">30ml</button>
+            <button class="size-btn" onclick="selectSize(this)">50ml</button>
+            <button class="size-btn" onclick="selectSize(this)">100ml</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-img">
+        <div class="product-bg" style="background: linear-gradient(135deg, #0a1520 0%, #1a3a4a 50%, #0d2030 100%);">
+          <svg width="90" height="140" viewBox="0 0 90 140" fill="none">
+            <rect x="36" y="4" width="18" height="7" rx="3" fill="#C9A96E"/>
+            <rect x="38" y="11" width="14" height="20" fill="#B8CCE0" opacity="0.5"/>
+            <path d="M25 31 Q25 44 16 52 L16 116 Q16 126 45 126 Q74 126 74 116 L74 52 Q65 44 65 31 Z" fill="rgba(100,160,200,0.12)" stroke="rgba(150,200,230,0.5)" stroke-width="1.2"/>
+            <rect x="24" y="62" width="42" height="38" rx="1" fill="rgba(245,240,232,0.06)" stroke="rgba(150,200,230,0.3)" stroke-width="0.5"/>
+            <text x="45" y="80" text-anchor="middle" font-family="serif" font-size="5.5" fill="rgba(245,240,232,0.8)" letter-spacing="2">SILLAGE</text>
+            <text x="45" y="91" text-anchor="middle" font-family="serif" font-size="4" fill="rgba(150,200,230,0.8)" letter-spacing="1">BLEU NUIT</text>
+          </svg>
+        </div>
+        <div class="product-overlay"></div>
+        <button class="product-quick-add" onclick="addToCart('Bleu Nuit', 'R$ 760', this)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-info">
+        <div class="product-family">Aquático Amaderado</div>
+        <div class="product-name">Bleu Nuit</div>
+        <div class="product-notes">Bergamota · Cedro · Musgo Marinho · Patchouli</div>
+        <div class="product-footer">
+          <span class="product-price">R$ 760</span>
+          <div class="product-sizes">
+            <button class="size-btn active" onclick="selectSize(this)">30ml</button>
+            <button class="size-btn" onclick="selectSize(this)">50ml</button>
+            <button class="size-btn" onclick="selectSize(this)">100ml</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-img">
+        <div class="product-bg" style="background: linear-gradient(135deg, #1a1508 0%, #3a3010 50%, #2a2008 100%);">
+          <svg width="80" height="150" viewBox="0 0 80 150" fill="none">
+            <ellipse cx="40" cy="12" rx="12" ry="5" fill="#C9A96E"/>
+            <rect x="34" y="12" width="12" height="22" fill="#D4C090" opacity="0.6"/>
+            <path d="M18 34 Q18 44 12 50 L12 126 Q12 134 40 134 Q68 134 68 126 L68 50 Q62 44 62 34 Z" fill="rgba(180,160,80,0.15)" stroke="#C9A96E" stroke-width="1.2"/>
+            <rect x="20" y="68" width="40" height="36" rx="1" fill="rgba(245,240,232,0.06)" stroke="rgba(201,169,110,0.25)" stroke-width="0.5"/>
+            <text x="40" y="85" text-anchor="middle" font-family="serif" font-size="5" fill="rgba(245,240,232,0.8)" letter-spacing="2">SILLAGE</text>
+            <text x="40" y="97" text-anchor="middle" font-family="serif" font-size="3.8" fill="rgba(201,169,110,0.7)" letter-spacing="1">OR BLANC</text>
+          </svg>
+        </div>
+        <div class="product-overlay"></div>
+        <button class="product-quick-add" onclick="addToCart('Or Blanc', 'R$ 1.150', this)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-info">
+        <div class="product-family">Chypre Dourado</div>
+        <div class="product-name">Or Blanc</div>
+        <div class="product-notes">Sândalo · Ylang-ylang · Íris · Almíscar Branco</div>
+        <div class="product-footer">
+          <span class="product-price">R$ 1.150</span>
+          <div class="product-sizes">
+            <button class="size-btn active" onclick="selectSize(this)">50ml</button>
+            <button class="size-btn" onclick="selectSize(this)">100ml</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card reveal reveal-delay-3">
+      <div class="product-img">
+        <div class="product-bg" style="background: linear-gradient(135deg, #0f1a10 0%, #1e3820 50%, #0c1510 100%);">
+          <svg width="85" height="145" viewBox="0 0 85 145" fill="none">
+            <rect x="34" y="4" width="17" height="10" rx="5" fill="#C9A96E"/>
+            <rect x="37" y="14" width="11" height="18" fill="#A8C8A0" opacity="0.5"/>
+            <path d="M22 32 L22 50 Q14 57 14 65 L14 122 Q14 131 42 131 Q70 131 70 122 L70 65 Q62 57 62 50 L62 32 Z" fill="rgba(80,160,80,0.1)" stroke="rgba(120,180,100,0.4)" stroke-width="1"/>
+            <rect x="22" y="66" width="40" height="38" rx="1" fill="rgba(245,240,232,0.06)" stroke="rgba(120,180,100,0.25)" stroke-width="0.5"/>
+            <text x="42" y="83" text-anchor="middle" font-family="serif" font-size="5.5" fill="rgba(245,240,232,0.8)" letter-spacing="2">SILLAGE</text>
+            <text x="42" y="96" text-anchor="middle" font-family="serif" font-size="3.8" fill="rgba(120,180,100,0.8)" letter-spacing="1">FORÊT</text>
+          </svg>
+        </div>
+        <div class="product-overlay"></div>
+        <button class="product-quick-add" onclick="addToCart('Forêt Verte', 'R$ 680', this)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-info">
+        <div class="product-family">Verde Fougère</div>
+        <div class="product-name">Forêt Verte</div>
+        <div class="product-notes">Vetiver · Pinho · Lavanda · Oakmoss</div>
+        <div class="product-footer">
+          <span class="product-price">R$ 680</span>
+          <div class="product-sizes">
+            <button class="size-btn active" onclick="selectSize(this)">30ml</button>
+            <button class="size-btn" onclick="selectSize(this)">50ml</button>
+            <button class="size-btn" onclick="selectSize(this)">100ml</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section class="promo-section" id="sobre">
+  <div class="promo-left reveal">
+    <p class="promo-tag">Nossa Filosofia</p>
+    <h2 class="promo-title">Perfumaria como <em>arte</em> pura</h2>
+    <p class="promo-desc">Fundada por mestres perfumistas com décadas de experiência em Grasse, a Sillage nasceu da crença de que um perfume é muito mais que uma fragrância — é uma memória, uma emoção, uma segunda pele.</p>
+    <button class="btn-outline">Conhecer nossa história</button>
+  </div>
+  <div class="promo-right reveal reveal-delay-1">
+    <div class="promo-stat">
+      <div class="stat-num">47</div>
+      <div class="stat-label">Ingredientes únicos</div>
+    </div>
+    <div class="promo-stat">
+      <div class="stat-num">12+</div>
+      <div class="stat-label">Anos de tradição</div>
+    </div>
+    <div class="promo-stat">
+      <div class="stat-num">8k</div>
+      <div class="stat-label">Clientes apaixonados</div>
+    </div>
+    <div class="promo-stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Cruelty Free</div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" id="categorias">
+  <div class="section-header reveal">
+    <div>
+      <span class="section-label">Explore por família</span>
+      <h2 class="section-title">Encontre sua <em>assinatura</em></h2>
+    </div>
+  </div>
+  <div class="categories-grid">
+    <div class="cat-card reveal">
+      <div class="cat-bg" style="background: linear-gradient(160deg, #1a0a0a 0%, #5a2020 40%, #3a1010 100%);"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-content">
+        <div class="cat-name">Florais Orientais</div>
+        <div class="cat-count">18 fragrâncias</div>
+        <a href="#" class="cat-link">Explorar</a>
+      </div>
+    </div>
+    <div class="cat-card reveal reveal-delay-1">
+      <div class="cat-bg" style="background: linear-gradient(160deg, #0a1520 0%, #204060 40%, #102030 100%);"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-content">
+        <div class="cat-name">Aquáticos</div>
+        <div class="cat-count">9 fragrâncias</div>
+        <a href="#" class="cat-link">Explorar</a>
+      </div>
+    </div>
+    <div class="cat-card reveal reveal-delay-2">
+      <div class="cat-bg" style="background: linear-gradient(160deg, #100f05 0%, #403510 40%, #201a05 100%);"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-content">
+        <div class="cat-name">Amadeirados</div>
+        <div class="cat-count">14 fragrâncias</div>
+        <a href="#" class="cat-link">Explorar</a>
+      </div>
+    </div>
+    <div class="cat-card reveal reveal-delay-1">
+      <div class="cat-bg" style="background: linear-gradient(160deg, #0a1510 0%, #205530 40%, #102015 100%);"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-content">
+        <div class="cat-name">Verdes</div>
+        <div class="cat-count">7 fragrâncias</div>
+        <a href="#" class="cat-link">Explorar</a>
+      </div>
+    </div>
+    <div class="cat-card reveal reveal-delay-2">
+      <div class="cat-bg" style="background: linear-gradient(160deg, #150a15 0%, #502050 40%, #200a20 100%);"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-content">
+        <div class="cat-name">Gourmand</div>
+        <div class="cat-count">11 fragrâncias</div>
+        <a href="#" class="cat-link">Explorar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials">
+  <div class="section-header reveal">
+    <div>
+      <span class="section-label">Depoimentos</span>
+      <h2 class="section-title">O que nossos clientes <em>sentem</em></h2>
+    </div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial reveal">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">O Sillage Rouge transformou minha forma de me apresentar ao mundo. Cada vez que o uso, recebo elogios que me fazem sentir única e especial.</p>
+      <div class="testimonial-author">
+        <strong>Isabela Monteiro</strong>
+        São Paulo, SP
+      </div>
+    </div>
+    <div class="testimonial reveal reveal-delay-1">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">A qualidade dos ingredientes é incomparável. O Or Blanc tem uma fixação extraordinária e evolui de forma surpreendente ao longo do dia.</p>
+      <div class="testimonial-author">
+        <strong>Rafael Carvalho</strong>
+        Rio de Janeiro, RJ
+      </div>
+    </div>
+    <div class="testimonial reveal reveal-delay-2">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">Cada frasco é uma obra de arte. O atendimento é impecável e as amostras grátis me ajudaram a encontrar minha fragrância perfeita.</p>
+      <div class="testimonial-author">
+        <strong>Marina Souza</strong>
+        Curitiba, PR
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="contato">
+  <span class="section-label reveal">Fique por dentro</span>
+  <h2 class="newsletter-title reveal">Acesso <em>exclusivo</em></h2>
+  <p class="newsletter-sub reveal">Inscreva-se e receba lançamentos antes de todos, ofertas especiais e convites para eventos privados.</p>
+  <div class="newsletter-form reveal">
+    <input type="email" placeholder="Seu melhor e-mail" id="emailInput">
+    <button onclick="subscribe()">Inscrever-se</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="footer-brand-name">SILLAGE</span>
+      <p class="footer-desc">Maison de Parfums. Criando fragrâncias exclusivas com ingredientes raros desde 2013. Cada perfume conta uma história que permanece.</p>
+    </div>
+    <div>
+      <p class="footer-col-title">Coleções</p>
+      <ul class="footer-links">
+        <li><a href="#">Novidades</a></li>
+        <li><a href="#">Bestsellers</a></li>
+        <li><a href="#">Edição Limitada</a></li>
+        <li><a href="#">Coleção Noite</a></li>
+        <li><a href="#">Presentes</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Informações</p>
+      <ul class="footer-links">
+        <li><a href="#">Nossa História</a></li>
+        <li><a href="#">Ingredientes</a></li>
+        <li><a href="#">Sustentabilidade</a></li>
+        <li><a href="#">Blog Olfativo</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Suporte</p>
+      <ul class="footer-links">
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Trocas e Devoluções</a></li>
+        <li><a href="#">Rastrear Pedido</a></li>
+        <li><a href="#">Política de Privacidade</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Sillage Maison de Parfums. Todos os direitos reservados.</span>
+    <div class="footer-social">
+      <a href="#">in</a>
+      <a href="#">ig</a>
+      <a href="#">pt</a>
+    </div>
+  </div>
+</footer>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <span class="cart-title">Seu Carrinho</span>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty" id="cartEmpty">
+      <em>Seu carrinho está vazio</em>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-price" id="cartTotalPrice">R$ 0</span>
+    </div>
+    <button class="btn-checkout">Finalizar Compra</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
